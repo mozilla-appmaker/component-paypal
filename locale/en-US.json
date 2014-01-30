@@ -2,15 +2,11 @@
 	"ceci-paypal": "paypal",
 	"ceci-paypal/donationAmount": "Donation Amount:",
 	"ceci-paypal/description": "Add your own PayPal donation buttons, and start raising funds.",
-	"ceci-paypal/attributes/label": "Click Me",
-	"ceci-paypal/attributes/label/label": "Label",
-	"ceci-paypal/attributes/label/description": "Text shown on the button.",
-	"ceci-paypal/attributes/value/label": "Value",
-	"ceci-paypal/attributes/value/description": "Value sent by the button.",
-	"ceci-paypal/attributes/textcolor/label": "Text Color",
-	"ceci-paypal/attributes/textcolor/description": "Color of the text on the button's label.",
-	"ceci-paypal/attributes/buttoncolor/label": "paypal Color",
-	"ceci-paypal/attributes/buttoncolor/description": "Background color of the button.",
-	"ceci-paypal/attributes/buttonactivecolor/label": "Button Active Color",
-	"ceci-paypal/attributes/buttonactivecolor/description": "Background color of the button while it is being clicked or tapped."
+	"ceci-paypal/attributes/amount/label": "Amount",
+	"ceci-paypal/attributes/amount/description": "Amount of money to donate.",
+	"ceci-paypal/attributes/account/label": "Account",
+	"ceci-paypal/attributes/account/description": "PayPal account which will receive payment.",
+	"ceci-paypal/attributes/currency": "USD",
+	"ceci-paypal/attributes/currency/label": "Currency",
+	"ceci-paypal/attributes/currency/description": "Currency code for donation amount."
 }
