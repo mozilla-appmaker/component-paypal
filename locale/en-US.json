@@ -1,5 +1,5 @@
 {
-	"ceci-paypal": "paypal",
+	"ceci-paypal": "Paypal",
 	"ceci-paypal/donationAmount": "Donation Amount:",
 	"ceci-paypal/description": "Add your own PayPal donation buttons, and start raising funds.",
 	"ceci-paypal/attributes/amount/label": "Amount",
