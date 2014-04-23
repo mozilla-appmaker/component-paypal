@@ -1,4 +1,45 @@
 <polymer-element name="ceci-paypal" attributes="amount account currency" extends="ceci-element" currency="BRL" amount="5" account="donate@mozilla.org" button="false">
+  <ceci-definition>
+    {
+      "name": "PayPal",
+      "description": "Add your own PayPal donation buttons, and start raising funds.",
+      "tags": ["paypal", "donate"],
+      "thumbnail": "./thumbnail.png",
+      "broadcasts": {
+        "donate": {
+          "label": "Donate",
+          "description": "Occurs when donation process begins."
+        }
+      },
+      "listeners": {
+        "submit": {
+          "description": "Submits a donation once settings have been chosen.",
+          "label": "Submit",
+          "default": "orange"
+        }
+      },
+      "attributes": {
+        "amount": {
+          "label": "Amount",
+          "description": "Amount of money to donate.",
+          "editable": "number",
+          "listener": true,
+          "max": 3,
+          "min": 50
+        },
+        "account": {
+          "label": "Account",
+          "description": "PayPal account which will receive payment.",
+          "editable": "text"
+        },
+        "currency": {
+          "label": "Currency",
+          "description": "Currency code for donation amount.",
+          "editable": "text"
+        }
+      }
+    }
+  </ceci-definition>
   <template>
     <link rel="stylesheet" href="component.css"></link>
     <h3><span id="donationAmount">Donation Amount:</span> <span>{{amount}}</span> <span>{{currency}}</span></h3>
@@ -15,47 +56,6 @@
     </form>
     <img src="thumbnail.png">
     <shadow></shadow>
-    <script type="text/json" id="ceci-definition">
-      {
-        "name": "PayPal",
-        "description": "Add your own PayPal donation buttons, and start raising funds.",
-        "tags": ["paypal", "donate"],
-        "thumbnail": "./thumbnail.png",
-        "broadcasts": {
-          "donate": {
-            "label": "Donate",
-            "description": "Occurs when donation process begins."
-          }
-        },
-        "listeners": {
-          "submit": {
-            "description": "Submits a donation once settings have been chosen.",
-            "label": "Submit",
-            "default": "orange"
-          }
-        },
-        "attributes": {
-          "amount": {
-            "label": "Amount",
-            "description": "Amount of money to donate.",
-            "editable": "number",
-            "listener": true,
-            "max": 3,
-            "min": 50
-          },
-          "account": {
-            "label": "Account",
-            "description": "PayPal account which will receive payment.",
-            "editable": "text"
-          },
-          "currency": {
-            "label": "Currency",
-            "description": "Currency code for donation amount.",
-            "editable": "text"
-          }
-        }
-      }
-    </script>
   </template>
   <script>
     Polymer('ceci-paypal', {
