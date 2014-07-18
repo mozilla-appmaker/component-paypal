@@ -61,7 +61,7 @@
     Polymer('ceci-paypal', {
       ready: function () {
         this.super();
-        this.$.donationAmount.innerHTML = this.gettext(this.localName + "/donationAmount") || this.$.donationAmount.innerHTML;
+        this.$.donationAmount.textContent = this.gettext(this.localName + "/donationAmount") || this.$.donationAmount.textContent;
       },
       submit: function (value) {
         this.$.form.submit();
